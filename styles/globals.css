@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&family=Rubik:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bookmark {
+    @apply absolute top-0 right-0 mt-3 mr-3 md:mt-5 md:mr-5 bg-light-grey p-2 rounded-full md:w-7 cursor-pointer
+}
+
+.navbar {
+    @apply 
+    sm:flex 
+    lg:flex-col 
+    justify-around 
+    gap-20 
+    md:gap-52 
+    bg-semi-blue 
+    p-4 
+    md:w-11/15 
+    md:ml-5 
+    md:mt-4 
+    md:rounded-lg 
+    lg:rounded-3xl
+    lg:w-20 
+    lg:h-976
+    lg:p-6
+    lg:ml-8
+    lg:gap-34
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
