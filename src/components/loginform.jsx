@@ -1,49 +1,39 @@
 "use client"
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 
 export default function LoginForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState(null)
   const router = useRouter(); // Initialize the router
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (!email || !password) {
       setError('Both email and password are required.');
       return;
     }
-
+  
     try {
       // Make a POST request to the /api/login route
-      const response = await fetch('/http://localhost:3000/api/login', {
+      const response = await fetch('http://localhost:3000/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ username: email, password }),
       });
-
+  
       const data = await response.json();
-
+  
       if (response.status === 200) {
         // User is successfully logged in
-        const result = await signIn('credentials', {
-          redirect: false,
-          email,
-          password,
-        });
-        if (result.error) {
-          setError('Login failed. Please check your credentials.');
-        } else {
-          router.push('/home');
-        }
+        router.push('/home'); // Redirect to the home page after successful login
       } else {
         // Handle login failure
         setError(data.error || 'Login failed.');
@@ -53,6 +43,7 @@ export default function LoginForm() {
       setError('Internal server error');
     }
   };
+  
 
   return (
     <main>
