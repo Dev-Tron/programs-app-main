@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Dev-Tron/programs-app-main.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/Dev-Tron/programs-app-main.git)
+- Live Site URL: https://programs-app-main-kwl5r6ouc-keytron-browns-projects.vercel.app
 
 ## My process
 
@@ -61,8 +61,8 @@ This project is my second to last final project. I will attempt a guru level pro
 
 ### Useful resources
 
-- [Example resource 1](https://www.prisma.io/) - This is an orm system that I used to set up me database on the backend of my application.
-- [Example resource 2](https://next-auth.js.org/getting-started/example) - Using this guide helped me set up the foundations for completing the validations on my login and sign up forms.
+- (https://www.prisma.io/) - This is an orm system that I used to set up me database on the backend of my application.
+- (https://next-auth.js.org/getting-started/example) - Using this guide helped me set up the foundations for completing the validations on my login and sign up forms.
 
 ## Author
 
