@@ -21,7 +21,7 @@ export default function LoginForm() {
   
     try {
       // Make a POST request to the /api/login route
-      const response = await fetch('/api/login', {
+      const response = await fetch('https://programs-app-main.vercel.app/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export default function LoginForm() {
         body: JSON.stringify({ username: email, password }),
       });
   
-      const data = await response.json();
+      const data = await response.json()
   
       if (response.status === 200) {
         // User is successfully logged in

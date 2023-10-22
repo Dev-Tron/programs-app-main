@@ -17,7 +17,7 @@ const handler = NextAuth({
         },
         async authorize(credentials, req) {
           // Add logic here to look up the user from the credentials supplied
-          const res = await fetch("/api/login", {
+          const res = await fetch("https://programs-app-main.vercel.app/api/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -27,6 +27,10 @@ const handler = NextAuth({
             password: credentials?.password,
           }),
         });
+
+        //What is the correct path to fetch from api/login?
+        // const res = await fetch("/api/login", {
+        //   method: "POST",
 
         const user = await res.json()
     
