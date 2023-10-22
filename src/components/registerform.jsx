@@ -66,25 +66,21 @@ export default function SignUp() {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
-          })
-  
+          });
+        
           if (response.ok) {
-            // Registration was successful
-            // You can handle the success case here, e.g., redirect the user
-            router.push('/') // Redirect to the home route
+            // Redirect to the home page after successful sign up
+            router.push('/')
           } else {
-            // Registration failed
-            const data = await response.json()
-            if (data.error) {
-              // Handle the error, e.g., display an error message
-              console.error(data.error)
-            }
+            // Handle the response status, e.g., display an error message
+            console.error('API request failed with status', response.status);
           }
         } catch (error) {
-          console.error(error);
+          // Handle network or other errors
+          console.error('An error occurred:', error);
         }
       }
-    };
+    }
 
   return <div>
     <div className='container flex flex-col items-center'>
