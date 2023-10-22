@@ -21,7 +21,7 @@ export default function LoginForm() {
   
     try {
       // Make a POST request to the /api/login route
-      const response = await fetch('https://programs-app-main.vercel.app/api/login', {
+      const response = await fetch('/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
