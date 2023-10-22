@@ -21,7 +21,7 @@ export default function LoginForm() {
   
     try {
       // Make a POST request to the /api/login route
-      const response = await fetch('http://localhost:3000/api/login', {
+      const response = await fetch('/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export default function LoginForm() {
   
 
   return (
-    <main>
+    <div>
       <div className='container flex flex-col items-center'>
         <div className='mt-12 md:mt-20 lg:mt-48'>
           <Image className='md:w-8 md:h-6' src='/images/logo.svg' alt='logo-icon' width={25} height={20} />
@@ -79,6 +79,6 @@ export default function LoginForm() {
           </form>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

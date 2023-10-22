@@ -21,7 +21,7 @@ export default function Home() {
  
   return <div className="container lg:flex lg:gap-6">
   <Nav />
-  <main>
+  <div>
     <div className='p-4 md:p-6 mt-2 md:mt-3 lg:mt-8'>
       <div className='flex gap-4'>
         <Image className='md:w-8 md:h-8' src='/images/icon-search.svg' alt='search-icon' width={24} height={24}/>
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
         </section>
     </div>
-  </main>
+  </div>
 </div>
 }
 

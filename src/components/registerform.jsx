@@ -56,11 +56,11 @@ export default function SignUp() {
           email: email,
           password: password,
           repeatpassword: repeatPassword,
-        };
+        }
   
         // Make a POST request to the API route
         try {
-          const response = await fetch('http://localhost:3000/api/user', {
+          const response = await fetch('/api/user', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ export default function SignUp() {
       }
     };
 
-  return <main>
+  return <div>
     <div className='container flex flex-col items-center'>
         <div className='mt-12 md:mt-20 lg:mt-48'>
             <Image className='md:w-8 md:h-6' src='/images/logo.svg' alt='logo-icon' width={25} height={20}/>
@@ -133,5 +133,5 @@ export default function SignUp() {
             </form>
         </div>
     </div>
-</main>
+</div>
 }

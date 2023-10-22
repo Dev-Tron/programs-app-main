@@ -9,6 +9,8 @@
     "lint": "next lint",
     "postinstall": "prisma generate"
   },
+  "proxy": "http://localhost:3000",
+
   "dependencies": {
     "@prisma/client": "^5.4.2",
     "@types/jest": "^29.5.5",

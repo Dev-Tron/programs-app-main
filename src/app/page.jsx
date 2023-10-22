@@ -1,8 +1,8 @@
 import LoginForm from "@src/components/loginform"
 
 export default function mainPage() {
-  return <main>
+  return <section>
     <LoginForm/>
-</main>
+</section>
 }
 
