@@ -60,7 +60,7 @@ export default function SignUp() {
   
         // Make a POST request to the API route
         try {
-          const response = await fetch('/api/user', {
+          const response = await fetch('api/user', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
